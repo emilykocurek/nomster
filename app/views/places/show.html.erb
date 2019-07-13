@@ -99,7 +99,7 @@
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="photoModal" tabindex="-1" role="dialog" aria-labelledby="photoModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -125,7 +125,7 @@
 <div class="col-10 offset-1">
 <h1 class="float-left">Photos</h1>
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#myModal">
+<button type="button" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#photoModal">
   Add photo
 </button>
 </div>
@@ -137,8 +137,8 @@
     <blockquote>
       <% if photo.picture.url %>
       <%= image_tag photo.picture.url, class: 'img-fluid' %>
-      <small><%= photo.user.email %></small>
       <%= photo.caption %>
+       <small><%= photo.user.email %></small>
       <% end %>
     </blockquote>
   </div>
